@@ -36,7 +36,7 @@ const Expensive = () => {
     governmentServiceCost: "",
     numberOfPersons: "",
   });
-
+  const baseURL = "https://tracker-server-m9vs.onrender.com"
   const handleInputChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
@@ -45,7 +45,7 @@ const Expensive = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:5000/api/v1/expenses`, {
+      const response = await fetch(`${baseURL}/api/v1/expenses`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
