@@ -37,6 +37,7 @@ const Expensive = () => {
     numberOfPersons: "",
   });
   const baseURL = "https://tracker-server-m9vs.onrender.com"
+  const baseURL1="http://localhost:5000"
   const handleInputChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
